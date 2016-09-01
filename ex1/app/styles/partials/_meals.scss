@@ -1,0 +1,89 @@
+.meals {
+
+  figure {
+    margin-bottom: 3rem;
+  }
+
+  .main {
+    height: 105%;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .h1 {
+    // height: 85vh;
+    height: 95vh;
+  }
+
+  .h2 {
+    // height: 46.7vh;
+    height: 51.7vh;
+  }
+
+  .h3 {
+    // height: 35vh;
+    height: 40vh;
+  }
+
+  .description {
+    left: 50%;
+    max-width: 35rem;
+    position: absolute;
+    text-align: center;
+    top: 85%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+
+    h1 {
+      position: relative;
+
+      &:before {
+        background-color: white;
+        content: ' ';
+        height: .1rem;
+        left: 50%;
+        position: absolute;
+        top: -35%;
+        transform: translateX(-50%);
+        width: 100%;
+      }
+    }
+  }
+}
+
+.meal {
+  position: relative;
+}
+
+[data-meal-name] {
+  background-size: cover !important;
+  position: relative;
+
+  &:after {
+    background-image: linear-gradient(-180deg, rgba(255,255,255,0.00) 0%, rgba(0,0,0,0.60) 100%);
+    content: ' ';
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+}
+
+[data-meal-name="treat-yo-self"] {
+  background: url(../images/meals/treat-yo-self.png) no-repeat center;
+}
+
+[data-meal-name="super-sami"] {
+  background: url(../images/meals/super-sami.png) no-repeat center;
+
+}
+
+[data-meal-name="sassy-salad"] {
+  background: url(../images/meals/sassy-salad.png) no-repeat center;
+
+}
+
+[data-meal-name="big-burg"] {
+  background: url(../images/meals/big-burg.png) no-repeat center;
+}
