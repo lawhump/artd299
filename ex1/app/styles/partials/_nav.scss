@@ -14,10 +14,11 @@ nav {
     padding: 4rem 0;
 
     li {
+      cursor: pointer;
       display: inline;
       position: relative;
 
-      h4 {
+      h5 {
         display: inline;
       }
 
@@ -25,13 +26,22 @@ nav {
         margin-right: 1.5rem;
         padding-right: 1.5rem;
 
-        &:after {
+        &:not(:first-of-type):after {
           color: #C7C7C7;
           content: '.';
           font-size: 3rem;
           left: 100%;
           position: absolute;
           top: 0%;
+          transform: translate(-50%, -50%);
+        }
+
+        &:first-of-type:after {
+          color: #C7C7C7;
+          content: '|';
+          left: 100%;
+          position: absolute;
+          top: 50%;
           transform: translate(-50%, -50%);
         }
       }
@@ -51,5 +61,9 @@ nav {
       margin-right: 2rem;
       width: 3rem;
     }
+  }
+
+  .active {
+    font-weight: bold;
   }
 }
